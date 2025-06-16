@@ -1,18 +1,15 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import EditPostPage from './EditPostPage';
-import HomePage from './HomePage';
+import BlogPostItem from './BlogPostItem';
+import './App.css';
 
-const App = () => {
+function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/edit-post" element={<EditPostPage />} />
-        {/* You can also add: <Route path="/create-post" element={<CreatePostPage />} /> */}
-      </Routes>
-    </Router>
+    <div className="App">
+      <h1>My Blog</h1>
+      <BlogPostItem title="First Post" content="This is the content of the first post." />
+      <BlogPostItem title="Second Post" content="Here is the second post content." />
+    </div>
   );
-};
+}
 
 export default App;
